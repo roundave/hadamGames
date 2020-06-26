@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">aplicaciónc con splash</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login">Login</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="app_name2">formulario</string>
+    <string name="dsd" />
+    <string name="titulo">Formulario de registro</string>
+    <string name="Name2">Name</string>
+    <string name="email2">Email</string>
+    <string name="telefono">Telefono</string>
+    <string name="password2">Password</string>
+    <string name="confirmar_password">Confirmar password</string>
+    <string name="guardar">Guardar</string>
+    <string name="error_contrasena">Las contraseñas no coinciden</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="cine">Cine</string>
+    <string name="videojuegos">Videojuegos</string>
+    <string name="cocinar">Cocinar</string>
+    <string name="ciudad_nacimiento">CIudad de nacimiento</string>
+    <string name="fecha">DD/MM/YY</string>
+    <string name="genero">Genero</string>
+
+    <string-array name="lista_ciudades">
+        <item>Seleccione una ciudad</item>
+        <item>Barranquilla</item>
+        <item>Bogota</item>
+        <item>Cali</item>
+        <item>Medellin</item>
+    </string-array>
+
+
+</resources>

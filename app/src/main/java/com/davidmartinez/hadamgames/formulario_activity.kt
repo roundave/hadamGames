@@ -2,12 +2,16 @@ package com.davidmartinez.hadamgames
 
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_formulario_activity.*
 import java.util.*
 import kotlin.concurrent.timerTask
@@ -18,9 +22,12 @@ class formulario_activity : AppCompatActivity() {
     lateinit var result: TextView
     var contrasena: String = ""
     var correo: String = ""
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_formulario_activity)
+        window.statusBarColor = ContextCompat.getColor(this, android.R.color.transparent)
         Log.d("Oncreate", "ok")
 
 
@@ -123,6 +130,14 @@ class formulario_activity : AppCompatActivity() {
         intent.putExtra("correo", correo)
         startActivity(intent)
         finish()
+        overridePendingTransition(R.anim.slide_bottom_top_enter_formulario,R.anim.slide_bottom_top_exit_formulario)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+        overridePendingTransition(R.anim.slide_bottom_top_enter_formulario,R.anim.slide_bottom_top_exit_formulario)
+
     }
 
 

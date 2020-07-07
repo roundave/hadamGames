@@ -1,20 +1,30 @@
 package com.davidmartinez.hadamgames
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_login2_activity.*
+import org.w3c.dom.Text
 
 class login2_activity : AppCompatActivity() {
 
     // var password = " "
     //var correo = " "
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
+        val window: Window = this@login2_activity.getWindow()
+        window.statusBarColor = ContextCompat.getColor(this@login2_activity, android.R.color.transparent)
         setContentView(R.layout.activity_login2_activity)
 
 
@@ -63,11 +73,14 @@ class login2_activity : AppCompatActivity() {
         intent.putExtra("correo", et_email_login.text.toString())
         intent.putExtra("password", et_password_login.text.toString())
         startActivity(intent)
+        overridePendingTransition(R.anim.slide_left_right_enter,R.anim.slide_left_right_exit)
+
 
     }
 
     private fun goToformulario() {
         val intent = Intent(this, formulario_activity::class.java)
         startActivity(intent)
+        overridePendingTransition(R.anim.slide_bottom_top_enter_formulario,R.anim.slide_bottom_top_exit_formulario)
     }
 }

@@ -52,7 +52,7 @@
                 tools:ignore="MissingConstraints">
 
                 <ImageButton
-                    android:id="@+id/bt_perfil"
+                    android:id="@+id/bt_perfill"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginStart="8dp"
@@ -73,7 +73,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/button_redondo_iconos"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/bt_perfil"
+                    app:layout_constraintStart_toEndOf="@+id/bt_perfill"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.489"
                     app:srcCompat="@android:drawable/btn_dialog" />
@@ -133,7 +133,7 @@
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/bt_perfil"
+                    app:layout_constraintTop_toBottomOf="@+id/bt_perfill"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <TextView

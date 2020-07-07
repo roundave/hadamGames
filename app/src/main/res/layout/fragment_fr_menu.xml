@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="1dp">
 
         <ImageButton
-            android:id="@+id/bt_perfil"
+            android:id="@+id/bt_perfill"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="120dp"
@@ -41,7 +41,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bt_perfil" />
+            app:layout_constraintTop_toBottomOf="@+id/bt_perfill" />
 
         <ImageButton
             android:id="@+id/bt_novedades"

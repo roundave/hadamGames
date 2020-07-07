@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.bt_eventos
 import kotlinx.android.synthetic.main.activity_main.bt_novedades
 import kotlinx.android.synthetic.main.activity_main.bt_tienda
 import kotlinx.android.synthetic.main.fragment_fr_menu.*
+import kotlinx.android.synthetic.main.activity_main.bt_perfill as bt_perfill1
 
 
 class MainActivity : AppCompatActivity() {
@@ -51,6 +52,10 @@ class MainActivity : AppCompatActivity() {
         framelayout_menu.setOnClickListener {
             showfragmentmenu()
         }
+        bt_perfill.setOnClickListener{
+            showfragmentperfil()
+
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -85,10 +90,11 @@ class MainActivity : AppCompatActivity() {
     fun showfragmentnovedades() {
         val transaction = supportFragmentManager.beginTransaction()
         val fragment = novedades_fragment()
+        transaction.setCustomAnimations(R.anim.slide_left_right_enter, R.anim.slide_left_right_exit)
         transaction.replace(R.id.frameLayout2, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-        overridePendingTransition(R.anim.slide_left_right_enter, R.anim.slide_left_right_exit)
+
         novedadesload = true}
 
     fun showfragmentmenu(){
@@ -98,27 +104,34 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.layout_main, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
 
-
-
+    fun showfragmentperfil(){
+        val transaction = supportFragmentManager.beginTransaction()
+        val fragment = fr_perfil()
+        transaction.setCustomAnimations(R.anim.slide_left_right_exit, R.anim.slide_left_right_exit)
+        transaction.replace(R.id.frameLayout2, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     fun showfragmenteventos() {
         val transaction = supportFragmentManager.beginTransaction()
         val fragment=fr_evento()
+        transaction.setCustomAnimations(R.anim.slide_left_right_enter, R.anim.slide_left_right_exit)
         transaction.replace(R.id.frameLayout2, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-        overridePendingTransition(R.anim.slide_left_right_enter, R.anim.slide_left_right_exit)
+
         }
 
     fun showfragmenttienda() {
         val transaction = supportFragmentManager.beginTransaction()
         val fragment=fr_tienda()
+        transaction.setCustomAnimations(R.anim.slide_left_right_enter, R.anim.slide_left_right_exit)
         transaction.replace(R.id.frameLayout2, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-        overridePendingTransition(R.anim.slide_left_right_enter, R.anim.slide_left_right_exit)
     }
 
 

@@ -2,14 +2,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.davidmartinez.hadamgames.fr_tienda">
+    tools:context="com.davidmartinez.hadamgames.fr_perfil">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:text="@string/tienda"
-        android:textColor="#FFFFFF" />
+        android:text="@string/perfil"
+        android:textColor="@color/ic_icono_background" />
 
 </FrameLayout>

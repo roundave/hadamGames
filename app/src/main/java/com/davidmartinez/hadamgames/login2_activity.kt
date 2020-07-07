@@ -42,9 +42,9 @@ class login2_activity : AppCompatActivity() {
 
 
         bt_login.setOnClickListener {
-            if (et_email_login.text.toString() == correo && et_password_login.text.toString() == password)
+            //if (et_email_login.text.toString() == correo && et_password_login.text.toString() == password)
                 goToMainActivity()
-            else
+            //else
                 Toast.makeText(this, "Correo o Password incorrecto", Toast.LENGTH_SHORT).show()
         }
 

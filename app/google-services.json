@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "108106676369",
+    "firebase_url": "https://hadamgames-83dc5.firebaseio.com",
+    "project_id": "hadamgames-83dc5",
+    "storage_bucket": "hadamgames-83dc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108106676369:android:f34de496d0d65a29382730",
+        "android_client_info": {
+          "package_name": "com.davidmartinez.hadamgames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108106676369-5k9efpkaq2abrqubqg5q4aegf0jit81q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ8GxByQwk1xo8dVYPuOaNPHcxICe3r1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108106676369-5k9efpkaq2abrqubqg5q4aegf0jit81q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

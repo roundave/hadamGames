@@ -49,6 +49,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="mensaje">Mensajes</string>
+    <string name="notificacion">"notificaciones "</string>
+    <string name="nombre">Nombre</string>
+    <string name="usuario">Usuario</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_perfil">Perfil</string>
+    <string name="title_novedades">Novedades</string>
+    <string name="title_tienda">Tienda</string>
+    <string name="title_evento">Eventto</string>
+    <string name="title_Biblioteca">Biblioteca</string>
 
 
 </resources>

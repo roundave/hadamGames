@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    tools:showIn="navigation_view">
-
-    <group android:checkableBehavior="single">
 
     <item
-        android:title="cerrar Sesion"
-        android:id="@+id/close"
-        app:showAsAction="never"/>
+        android:id="@+id/navigation_perfil"
+        android:icon="@drawable/ic_user"
+        android:title="@string/title_perfil" />
+
+    <item
+        android:id="@+id/navigation_novedades"
+        android:icon="@drawable/ic_newspaper"
+        android:title="@string/title_novedades" />
+
+    <item
+        android:id="@+id/navigation_tienda"
+        android:icon="@drawable/ic_tienda"
+        android:title="@string/title_tienda" />
+    <item
+        android:id="@+id/navigation_evento"
+        android:icon="@drawable/ic_evento"
+        android:title="@string/title_evento" />
+    <item
+        android:id="@+id/navigation_biblioteca"
+        android:icon="?android:attr/listChoiceIndicatorMultiple"
+        android:title="@string/title_Biblioteca" />
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/close"
+            android:icon="@android:drawable/btn_dialog"
+            android:title="cerrar Sesion"
+            app:showAsAction="never" />
     </group>
 
-
 </menu>
+
+
+
+

@@ -1,22 +1,198 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.davidmartinez.hadamgames.fr_perfil">
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    tools:context="com.davidmartinez.hadamgames.ui.menu.fr_perfil">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/perfil"
-        android:textColor="@color/ic_icono_background" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ly_perfil3"
+            android:layout_width="396dp"
+            android:layout_height="268dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/corner_bottom_left_radius_morado_fondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ly_perfil2">
 
-</FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ly_perfil2"
+            android:layout_width="393dp"
+            android:layout_height="407dp"
+            android:background="@drawable/corner_bottom_left_radius_morado_fondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ly_perfil1">
+
+            <TextView
+                android:id="@+id/tv_nombre_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginLeft="34dp"
+                android:layout_marginEnd="308dp"
+                android:layout_marginRight="308dp"
+                android:text="@string/nombre"
+                android:textColor="@color/letra_perfil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginLeft="37dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="308dp"
+                android:layout_marginRight="308dp"
+                android:text="@string/usuario"
+                android:textColor="@color/letra_perfil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_perfil" />
+
+            <TextView
+                android:id="@+id/tv_genero_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="39dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="308dp"
+                android:layout_marginRight="308dp"
+                android:text="@string/genero"
+                android:textColor="@color/letra_perfil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="34dp"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="302dp"
+                android:layout_marginRight="302dp"
+                android:text="TextView"
+                android:textColor="@color/letra_perfil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_genero_perfil" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ly_perfil1"
+            android:layout_width="391dp"
+            android:layout_height="120dp"
+            android:background="@drawable/corner_bottom_left_radius_morado_fondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_foto_perfil">
+
+            <ImageView
+                android:id="@+id/iv_mensaje"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/ic_mensaje"
+                app:layout_constraintBottom_toTopOf="@+id/tv_mensaje"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_mensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="89dp"
+                android:layout_marginLeft="89dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/mensaje"
+                android:textColor="@color/letra_perfil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_mensaje" />
+
+            <ImageView
+                android:id="@+id/iv_notificacion"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_mensaje"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_notificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="87dp"
+                android:layout_marginLeft="87dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginRight="62dp"
+                android:layout_marginBottom="9dp"
+                android:text="@string/notificacion"
+                android:textColor="@color/letra_perfil"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_mensaje"
+                app:layout_constraintTop_toBottomOf="@+id/iv_notificacion" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_foto_perfil"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="115dp"
+            android:background="#FFFFFF"
+            android:src="@android:drawable/ic_menu_agenda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/bt_camara"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="308dp"
+            android:layout_marginLeft="308dp"
+            android:layout_marginTop="133dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="17dp"
+            android:background="@drawable/button_redondo_iconos"
+            android:src="@android:drawable/ic_menu_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_foto_perfil"
+            app:layout_constraintEnd_toEndOf="@+id/iv_foto_perfil"
+            app:layout_constraintStart_toStartOf="@+id/iv_foto_perfil"
+            app:layout_constraintTop_toTopOf="@+id/iv_foto_perfil" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

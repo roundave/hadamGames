@@ -3,36 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/novedades"
+    >
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.davidmartinez.hadamgames.novedades_fragment"
+        android:id="@+id/novedades"
+        android:name="com.davidmartinez.hadamgames.ui.menu.fr_novedades"
         android:label="@string/novedades"
-        tools:layout="@layout/fragment_novedades_fragment" >
-        <action
-            android:id="@+id/action_nav_home_to_nav_gallery"
-            app:destination="@id/nav_gallery"
-            app:enterAnim="@anim/fragment_fade_exit" />
-    </fragment>
+        tools:layout="@layout/fragment_novedades_fragment" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.davidmartinez.hadamgames.fr_tienda"
+        android:id="@+id/tienda"
+        android:name="com.davidmartinez.hadamgames.ui.menu.fr_tienda"
         android:label="@string/tienda"
-        tools:layout="@layout/fragment_fr_tienda" >
-        <action
-            android:id="@+id/action_nav_gallery_to_nav_slideshow"
-            app:destination="@id/nav_slideshow" />
-    </fragment>
+        tools:layout="@layout/fragment_fr_tienda" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.davidmartinez.hadamgames.fr_evento"
+        android:id="@+id/eventos"
+        android:name="com.davidmartinez.hadamgames.ui.menu.fr_evento"
         android:label="@string/eventos"
         tools:layout="@layout/fragment_fr_evento" >
         <action
-            android:id="@+id/action_nav_slideshow_to_nav_home"
-            app:destination="@id/nav_home" />
+            android:id="@+id/action_nav_slideshow_to_eventosDetailsFragment"
+            app:destination="@id/eventosDetailsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/eventosDetailsFragment"
+        android:name="com.davidmartinez.hadamgames.ui.submenus.eventosDetailsFragment"
+        android:label="eventosDetailsFragment" >
+        <argument
+            android:name="evento"
+            app:argType="com.davidmartinez.hadamgames.model.remote.eventoRemote" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fr_perfil"
+        android:name="com.davidmartinez.hadamgames.ui.menu.fr_perfil"
+        android:label="fragment_fr_perfil"
+        tools:layout="@layout/fragment_fr_perfil" />
 </navigation>

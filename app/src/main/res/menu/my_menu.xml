@@ -3,35 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_perfil"
+        android:id="@+id/navegation_perfil"
         android:icon="@drawable/ic_user"
-        android:title="@string/title_perfil" />
+        android:title="@string/title_perfil"
+        app:showAsAction="always"
+        />
 
     <item
-        android:id="@+id/navigation_novedades"
+        android:id="@+id/navegation_novedades"
         android:icon="@drawable/ic_newspaper"
+        android:iconTint="@color/azul_cardview"
+        android:iconTintMode="multiply"
         android:title="@string/title_novedades" />
 
     <item
-        android:id="@+id/navigation_tienda"
+        android:id="@+id/navegation_tienda"
         android:icon="@drawable/ic_tienda"
-        android:title="@string/title_tienda" />
+        android:title="@string/title_tienda"
+        />
     <item
-        android:id="@+id/navigation_evento"
+        android:id="@+id/navegation_evento"
         android:icon="@drawable/ic_evento"
-        android:title="@string/title_evento" />
+        android:title="@string/title_evento"
+        />
     <item
         android:id="@+id/navigation_biblioteca"
         android:icon="?android:attr/listChoiceIndicatorMultiple"
-        android:title="@string/title_Biblioteca" />
-    <group android:checkableBehavior="single">
+        android:title="@string/title_Biblioteca"
+        />
 
-        <item
-            android:id="@+id/close"
-            android:icon="@android:drawable/btn_dialog"
-            android:title="cerrar Sesion"
-            app:showAsAction="never" />
-    </group>
 
 </menu>
 

@@ -1,5 +1,7 @@
 package com.davidmartinez.hadamgames.model.remote
 
+import java.io.Serializable
+
 class tiendaRemote(
     val id: String?="",
     val nombre: String="",
@@ -10,5 +12,5 @@ class tiendaRemote(
     val genero:String="",
     val precio: Int =0
     //val color: Drawable
-    )
+    ):Serializable
 

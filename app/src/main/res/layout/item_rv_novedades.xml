@@ -3,23 +3,26 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
-    android:layout_height="323dp"
-    android:background="@android:color/transparent">
+    android:layout_height="323dp">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_novedades"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/corner_bottom_left_radius_naranja"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardCornerRadius="@dimen/cardview_compat_inset_shadow">
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MaterialComponents.Light"
 
+
+        app:cardElevation="0dp"
+        app:cardForegroundColor="@android:color/transparent"
+        app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_item_novedades"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/corner_bottom_left_radius_naranja">
+            android:background="@android:color/transparent">
 
             <TextView
                 android:id="@+id/tv_fecha_novedades"
@@ -27,13 +30,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="152dp"
+                android:layout_marginTop="112dp"
                 android:layout_marginEnd="278dp"
                 android:layout_marginRight="278dp"
                 android:text="fecha"
                 android:textColor="@color/letra_perfil"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.678"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,5 +89,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_nombre_novedades"
                 app:srcCompat="@android:drawable/ic_menu_report_image" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </FrameLayout>

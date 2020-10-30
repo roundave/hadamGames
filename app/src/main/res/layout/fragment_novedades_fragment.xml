@@ -10,5 +10,6 @@
         android:id="@+id/rv_novedades"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/transparent"
         tools:listitem="@layout/item_rv_novedades" />
 </RelativeLayout>

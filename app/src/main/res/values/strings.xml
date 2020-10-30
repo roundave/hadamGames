@@ -59,6 +59,7 @@
     <string name="title_tienda">Tienda</string>
     <string name="title_evento">Eventto</string>
     <string name="title_Biblioteca">Biblioteca</string>
+    <string name="datos_personales">Datos personales</string>
 
 
 </resources>

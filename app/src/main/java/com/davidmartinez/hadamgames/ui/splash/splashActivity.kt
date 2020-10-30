@@ -31,8 +31,9 @@ class splashActivity : AppCompatActivity() {
         val timer = Timer()
         timer.schedule(
             timerTask {
-                if (user != null)
+                if (user != null){
                     GotoMainActivity()
+                    finish()}
                 else
                     goTologin()
             }, 2000

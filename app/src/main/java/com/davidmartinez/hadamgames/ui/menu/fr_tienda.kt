@@ -5,23 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.davidmartinez.hadamgames.OverlapDecoration
 import com.davidmartinez.hadamgames.R
 import com.davidmartinez.hadamgames.recyclerView_items.tiendaRVAdapter
 import com.davidmartinez.hadamgames.model.remote.tiendaRemote
+import com.davidmartinez.hadamgames.ui.submenus.eventosDetailsFragment
+import com.davidmartinez.hadamgames.ui.submenus.tiendaDetailsFragment
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
-import kotlinx.android.synthetic.main.fragment_fr_evento.*
 import kotlinx.android.synthetic.main.fragment_fr_tienda.*
 
 
-class fr_tienda : Fragment() {
+class fr_tienda : Fragment(),tiendaRVAdapter.OnItemClickListener {
 
     val tiendaList: MutableList<tiendaRemote> = mutableListOf()
     private lateinit var tiendaAdapter: tiendaRVAdapter
@@ -39,13 +39,14 @@ class fr_tienda : Fragment() {
 
         cargarTienda()
 
+
         rv_tienda.layoutManager = LinearLayoutManager(
             requireContext(),
             RecyclerView.VERTICAL,// importante para la forma en la que se crea el recyvler
-            true
+            false
         )
         rv_tienda.setHasFixedSize(true)
-        tiendaAdapter = tiendaRVAdapter(tiendaList as ArrayList<tiendaRemote>)
+        tiendaAdapter = tiendaRVAdapter(tiendaList as ArrayList<tiendaRemote>,this)
         rv_tienda.adapter = tiendaAdapter
     }
 
@@ -62,7 +63,6 @@ class fr_tienda : Fragment() {
                 for (datasnapshot: DataSnapshot in snapshot.children) {
                     val tienda = datasnapshot.getValue(tiendaRemote::class.java)
                     tiendaList.add(tienda!!)
-
                 }
                 tiendaAdapter.notifyDataSetChanged()
                 // Log.d("data", snapshot.toString())
@@ -73,7 +73,17 @@ class fr_tienda : Fragment() {
         myRef.addListenerForSingleValueEvent(postListener)
     }
 
+    override fun onItemclick(tienda: tiendaRemote) {
+        val bundle=Bundle()
+        val tiendaDetailsFragment = tiendaDetailsFragment()
+        bundle.putSerializable("hola2",tienda)
+        tiendaDetailsFragment.arguments=bundle
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.layout_main, tiendaDetailsFragment)?.addToBackStack(null)
+            ?.commit()
+        //val action=fr_tiendaDirections.actionNavegationTiendaToTiendaDetailsFragment()
+      //findNavController().navigate(action)
 
-
+    }
 
 }

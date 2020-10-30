@@ -25,8 +25,8 @@
             android:gravity="center"
             android:shadowColor="#FFFFFF"
             android:text="@string/titulo"
-            android:textColor="?android:attr/colorActivatedHighlight"
-            android:textSize="24sp"
+            android:textColor="@color/fondo_app"
+            android:textSize="36sp"
             android:textStyle="bold" />
 
         <EditText
@@ -143,34 +143,6 @@
             android:layout_marginBottom="0dp"
             android:entries="@array/lista_ciudades"
             android:padding="20dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="21dp"
-            android:layout_margin="2dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/ch_cine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cine" />
-
-            <CheckBox
-                android:id="@+id/ch_videojuegos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/videojuegos" />
-
-            <CheckBox
-                android:id="@+id/ch_cocinar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/cocinar" />
-        </LinearLayout>
 
         <Button
             android:id="@+id/bt_guardar"

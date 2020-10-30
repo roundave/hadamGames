@@ -3,26 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/novedades"
-    >
+    app:startDestination="@id/navegation_novedades">
 
     <fragment
-        android:id="@+id/novedades"
+        android:id="@+id/navegation_novedades"
         android:name="com.davidmartinez.hadamgames.ui.menu.fr_novedades"
         android:label="@string/novedades"
         tools:layout="@layout/fragment_novedades_fragment" />
 
     <fragment
-        android:id="@+id/tienda"
+        android:id="@+id/navegation_tienda"
         android:name="com.davidmartinez.hadamgames.ui.menu.fr_tienda"
         android:label="@string/tienda"
-        tools:layout="@layout/fragment_fr_tienda" />
+        tools:layout="@layout/fragment_fr_tienda" >
+        <action
+            android:id="@+id/action_navegation_tienda_to_tiendaDetailsFragment"
+            app:destination="@id/tiendaDetailsFragment" />
+        <argument
+            android:name="tienda"
+            app:argType="com.davidmartinez.hadamgames.model.remote.tiendaRemote" />
+    </fragment>
 
     <fragment
-        android:id="@+id/eventos"
+        android:id="@+id/navegation_evento"
         android:name="com.davidmartinez.hadamgames.ui.menu.fr_evento"
         android:label="@string/eventos"
-        tools:layout="@layout/fragment_fr_evento" >
+        tools:layout="@layout/fragment_fr_evento">
         <action
             android:id="@+id/action_nav_slideshow_to_eventosDetailsFragment"
             app:destination="@id/eventosDetailsFragment" />
@@ -37,8 +43,17 @@
     </fragment>
 
     <fragment
-        android:id="@+id/fr_perfil"
+        android:id="@+id/navegation_perfil"
         android:name="com.davidmartinez.hadamgames.ui.menu.fr_perfil"
         android:label="fragment_fr_perfil"
-        tools:layout="@layout/fragment_fr_perfil" />
+        tools:layout="@layout/fragment_fr_perfil" >
+        <action
+            android:id="@+id/action_navigation_perfil_to_navegation_novedades3"
+            app:destination="@id/navegation_novedades" />
+    </fragment>
+    <fragment
+        android:id="@+id/tiendaDetailsFragment"
+        android:name="com.davidmartinez.hadamgames.ui.submenus.tiendaDetailsFragment"
+        android:label="tienda_details_fragment"
+        tools:layout="@layout/tienda_details_fragment" />
 </navigation>

@@ -1,9 +1,13 @@
 package com.davidmartinez.hadamgames.ui.submenus
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.graphics.Color
 import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
 import android.support.v4.media.session.MediaSessionCompat.Token.fromBundle
+import android.system.Os.close
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,14 +19,17 @@ import com.davidmartinez.hadamgames.ui.submenus.eventosDetailsFragmentArgs.Compa
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.jaeger.library.StatusBarUtil
 import kotlinx.android.synthetic.main.fragment_eventos_details.*
 import java.io.IOException
 
 
 class eventosDetailsFragment : Fragment(){
 
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        StatusBarUtil.setColor(context as Activity, Color.parseColor("#B4C55B"))
     }
 
 
@@ -72,6 +79,11 @@ class eventosDetailsFragment : Fragment(){
                 //val safeArgs=eventosDetailsFragment.fromBundle(it)
                // val evento:eventoRemote=safeArgs.evento
                 setData(evento)
+
+            bt_back_evento.setOnClickListener{
+                activity?.supportFragmentManager?.popBackStack()// revisar
+                StatusBarUtil.setColor(context as Activity, Color.parseColor("#FFFFFF"))
+            }
             }
 
 

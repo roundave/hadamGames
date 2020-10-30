@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFFFF"
+    android:background="@color/fondo_app"
     tools:context="com.davidmartinez.hadamgames.ui.menu.fr_perfil">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,27 +36,41 @@
             app:layout_constraintTop_toTopOf="@+id/ly_perfil1">
 
             <TextView
+                android:id="@+id/tv_fechaNacimientoPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/fecha"
+                android:textColor="@color/letra_perfil"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_genero_perfil" />
+
+            <TextView
                 android:id="@+id/tv_nombre_perfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="34dp"
-                android:layout_marginLeft="34dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="18dp"
                 android:layout_marginEnd="308dp"
                 android:layout_marginRight="308dp"
+                android:layout_marginBottom="192dp"
                 android:text="@string/nombre"
                 android:textColor="@color/letra_perfil"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <TextView
                 android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="37dp"
-                android:layout_marginLeft="37dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="308dp"
                 android:layout_marginRight="308dp"
@@ -71,8 +85,8 @@
                 android:id="@+id/tv_genero_perfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="39dp"
-                android:layout_marginLeft="39dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="308dp"
                 android:layout_marginRight="308dp"
@@ -84,19 +98,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="34dp"
-                android:layout_marginLeft="34dp"
-                android:layout_marginTop="26dp"
-                android:layout_marginEnd="302dp"
-                android:layout_marginRight="302dp"
-                android:text="TextView"
-                android:textColor="@color/letra_perfil"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="159dp"
+                android:text="@string/datos_personales"
+                android:textColor="@color/ic_icono_background"
+                android:textSize="18dp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_genero_perfil" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -168,8 +181,8 @@
 
         <ImageView
             android:id="@+id/iv_foto_perfil"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_width="388dp"
+            android:layout_height="211dp"
             android:layout_marginTop="115dp"
             android:background="#FFFFFF"
             android:src="@android:drawable/ic_menu_agenda"

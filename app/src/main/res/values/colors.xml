@@ -3,6 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="letra_perfil">#D1C5C5</color>
+    <color name="letra_perfil">#FFFFFF</color>
     <color name="fondo_app">#241332</color>
+    <color name="azul_cardview">#4F8DCB</color>
 </resources>

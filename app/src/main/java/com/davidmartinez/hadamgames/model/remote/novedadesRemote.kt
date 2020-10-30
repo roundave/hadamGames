@@ -1,5 +1,7 @@
 package com.davidmartinez.hadamgames.model.remote
 
+import android.graphics.drawable.Drawable
+
 class novedadesRemote(
 
     val id: String?="",

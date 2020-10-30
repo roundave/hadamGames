@@ -5,5 +5,6 @@ class Usuario(
     val nombre: String="",
     val telefono: String="",
     val genero: String="",
-    val fecha: String=""
+    val fecha: String="",
+    val fotoPerfil:String=""
 )

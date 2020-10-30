@@ -1,14 +1,12 @@
 package com.davidmartinez.hadamgames.recyclerView_items
 
-import android.os.Bundle
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.davidmartinez.hadamgames.R
 import com.davidmartinez.hadamgames.model.remote.eventoRemote
-import com.davidmartinez.hadamgames.ui.submenus.eventosDetailsFragment
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_rv_eventos.view.*
 
@@ -31,6 +29,14 @@ class eventosRVAdapter(
     override fun onBindViewHolder(holder: eventoViewHolder, position: Int) {
         val evento = eventosList[position]
         holder.bindEvento(evento)
+        if(position==0){
+            holder.itemView.cv_eventos.setCardBackgroundColor(Color.parseColor("#B4C55B"))
+        } else if(position%2==0 && position!=0) {
+            holder.itemView.cv_eventos.setCardBackgroundColor(Color.parseColor("#132641"))
+        }else{
+            holder.itemView.cv_eventos.setCardBackgroundColor(Color.parseColor("#4666E5"))
+        }
+
         /*holder.itemView.tv_nombre_evento.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 val activity = v!!.context as AppCompatActivity
